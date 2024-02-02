@@ -1,5 +1,4 @@
 import React, { useContext, useEffect, useState } from "react";
-import { Input, Typography } from "@material-tailwind/react";
 import { AuthContext } from "../context/auth.context";
 import { useNavigate } from "react-router-dom";
 import service from "../services/config";
