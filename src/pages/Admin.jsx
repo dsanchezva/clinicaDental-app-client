@@ -22,7 +22,7 @@ function Admin() {
 
   return (
     <div>
-      <h1>Administracion</h1>
+      <h1>Administracion Cesar</h1>
     </div>
   )
 }
