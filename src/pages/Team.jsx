@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
-import service from '../services/config';
-import TeamCard from '../components/TeamCard';
+import service from '../services/config.js';
+import TeamCard from '../components/TeamCard.jsx';
 
 function Team() {
   const navigate = useNavigate()
