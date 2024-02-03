@@ -19,6 +19,7 @@ function Team() {
       setTeam(response.data)
       setIsLoading(false)
     }catch(err) {
+      console.log(err)
       navigate('/error')
     }
   }
