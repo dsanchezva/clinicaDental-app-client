@@ -1,9 +1,27 @@
 import React, { useContext } from "react";
 import { AuthContext } from "../context/auth.context";
+import service from "../services/config";
+import { useNavigate } from "react-router-dom";
 
 function TeamCard(props) {
-  const { name, description, imgUrl } = props.data;
+  const { name, description, imgUrl, _id } = props.data;
   const {isLoggedIn} = useContext(AuthContext)
+  const navigate = useNavigate()
+
+  const handleDeleteTeam = async () => {
+
+try {
+    await service.delete(`/team/${_id}/delete`)
+    navigate('/')
+
+}catch(err) {
+}
+
+  }
+
+  const handleEditTeam = () => {
+    navigate(`/teamEdit/${_id}`)
+  }
 
   return (
     <div className="max-w-sm rounded overflow-hidden shadow-lg">
@@ -14,10 +32,10 @@ function TeamCard(props) {
       </div>
       {isLoggedIn ?    
       <div className="flex flex-row gap-10 justify-center mb-5">
-        <button className="bg-red-600 hover:bg-red-800 text-white font-bold py-2 px-4 rounded-full">
+        <button className="bg-red-600 hover:bg-red-800 text-white font-bold py-2 px-4 rounded-full" onClick={handleDeleteTeam}>
           Borrar
         </button>
-        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" onClick={handleEditTeam}>
           Editar
         </button>
       </div>

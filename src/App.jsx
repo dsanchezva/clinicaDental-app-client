@@ -12,6 +12,10 @@ import Navbar  from "./components/Navbar";
 import Login from "./pages/Login";
 import NotFound from "./pages/Error/NotFound";
 import Error from "./pages/Error/Error";
+import EditTeam from "./pages/Admin/EditTeam";
+import CreateTeam from "./pages/Admin/CreateTeam";
+import EditTreatment from "./pages/Admin/EditTreatment";
+import CreateTreatment from "./pages/Admin/CreateTreatment";
 
 function App() {
   return (
@@ -35,6 +39,46 @@ function App() {
               </IsPrivate>
             }
           />
+          <Route
+            path="/teamEdit/:teamId"
+            element={
+              <IsPrivate>
+                <EditTeam />
+              </IsPrivate>
+            }
+          />
+          <Route
+            path="/teamCreate"
+            element={
+              <IsPrivate>
+                <CreateTeam />
+              </IsPrivate>
+            }
+          />
+
+<Route
+            path="/treatmentEdit/:treatmentId"
+            element={
+              <IsPrivate>
+                <EditTreatment />
+              </IsPrivate>
+            }
+          />
+          <Route
+            path="/treatmentCreate"
+            element={
+              <IsPrivate>
+                <CreateTreatment />
+              </IsPrivate>
+            }
+          />
+
+
+
+
+
+
+
           <Route path="/login" element={<Login />} />
 
           {/* //Error Routes */}
