@@ -8,7 +8,7 @@ import Team from "./pages/Team";
 import Contact from "./pages/Contact";
 import Admin from "./pages/Admin";
 import IsPrivate from "./components/IsPrivate";
-import Navbar  from "./components/Navbar";
+import Navbar from "./components/Navbar";
 import Login from "./pages/Login";
 import NotFound from "./pages/Error/NotFound";
 import Error from "./pages/Error/Error";
@@ -22,70 +22,62 @@ function App() {
     <section className="layout">
       <Navbar className="header" />
 
-      
-        <Routes>
-          <Route path="/" element={<Home />} />
+      <Routes>
+        <Route path="/" element={<Home />} />
 
-          <Route path="/treatments" element={<Treatments />} />
-          <Route path="/team" element={<Team />} />
+        <Route path="/treatments" element={<Treatments />} />
+        <Route path="/team" element={<Team />} />
 
-          <Route path="/contact" element={<Contact />} />
+        <Route path="/contact" element={<Contact />} />
 
-          <Route
-            path="/admin"
-            element={
-              <IsPrivate>
-                <Admin />
-              </IsPrivate>
-            }
-          />
-          <Route
-            path="/teamEdit/:teamId"
-            element={
-              <IsPrivate>
-                <EditTeam />
-              </IsPrivate>
-            }
-          />
-          <Route
-            path="/teamCreate"
-            element={
-              <IsPrivate>
-                <CreateTeam />
-              </IsPrivate>
-            }
-          />
+        <Route
+          path="/admin"
+          element={
+            <IsPrivate>
+              <Admin />
+            </IsPrivate>
+          }
+        />
+        <Route
+          path="/teamEdit/:teamId"
+          element={
+            <IsPrivate>
+              <EditTeam />
+            </IsPrivate>
+          }
+        />
+        <Route
+          path="/teamCreate"
+          element={
+            <IsPrivate>
+              <CreateTeam />
+            </IsPrivate>
+          }
+        />
 
-<Route
-            path="/treatmentEdit/:treatmentId"
-            element={
-              <IsPrivate>
-                <EditTreatment />
-              </IsPrivate>
-            }
-          />
-          <Route
-            path="/treatmentCreate"
-            element={
-              <IsPrivate>
-                <CreateTreatment />
-              </IsPrivate>
-            }
-          />
+        <Route
+          path="/treatmentEdit/:treatmentId"
+          element={
+            <IsPrivate>
+              <EditTreatment />
+            </IsPrivate>
+          }
+        />
+        <Route
+          path="/treatmentCreate"
+          element={
+            <IsPrivate>
+              <CreateTreatment />
+            </IsPrivate>
+          }
+        />
 
+        <Route path="/login" element={<Login />} />
 
-
-
-
-
-
-          <Route path="/login" element={<Login />} />
-
-          {/* //Error Routes */}
-          <Route path="/error" element={<Error />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      
+        {/* //Error Routes */}
+        <Route path="/error" element={<Error />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
 
       <Footer className="footer" />
     </section>

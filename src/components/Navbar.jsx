@@ -42,8 +42,8 @@ function Navbar() {
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex flex-shrink-0 items-center">
                   <img
-                    className="h-8 w-auto"
-                    src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
+                    className="h-16 w-auto mr-20"
+                    src="/images/logoEstrella.png"
                     alt="Clinica Dental Estrella"
                   />
                 </div>
