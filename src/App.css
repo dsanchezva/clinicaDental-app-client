@@ -12,6 +12,9 @@
   background-attachment: fixed;
   background-size: cover;
 }
+.layout background {
+  opacity: 0.2;
+}
 .layout {
   display: grid;
   grid:
