@@ -37,9 +37,8 @@ function Team() {
 
   return (
     <>
-      <h1>Nuestro equipo</h1>
-      <br />
-      <p>Descipcion del equipo</p>
+      <h4 className="text-xl">Tu bienestar oral es nuestra misión, porque una sonrisa saludable es una vida plena.</h4>
+      <h4 className="text-xl">Por eso tenemos el mejor equipo:</h4>
       <br />
       <div className="team-list-container flex flex-row flex-wrap gap-9 justify-center align-middle">
         {team.map((each, index) => {
