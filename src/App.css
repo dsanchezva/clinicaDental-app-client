@@ -7,6 +7,10 @@
 .layout {
   position: relative;
   min-height: 120vh;
+  background-image: url("/images/wave-haikei.svg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 .layout {
   display: grid;
@@ -19,7 +23,11 @@
 }
 
 .header { grid-area: header; }
-.main { grid-area: main; }
+.main { 
+  grid-area: main;
+  
+
+}
 .footer { grid-area: footer; }
 
 #footer {
