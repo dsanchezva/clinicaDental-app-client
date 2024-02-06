@@ -12,7 +12,7 @@ function TeamCard(props) {
 
 try {
     await service.delete(`/team/${_id}/delete`)
-    navigate('/')
+    navigate('/team')
 
 }catch(err) {
 }
