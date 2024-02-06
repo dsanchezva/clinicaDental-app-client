@@ -21,7 +21,8 @@ function App() {
   return (
     <section className="layout">
       <Navbar className="header" />
-
+      
+      <div className="main">
       <Routes>
         <Route path="/" element={<Home />} />
 
@@ -37,7 +38,7 @@ function App() {
               <Admin />
             </IsPrivate>
           }
-        />
+          />
         <Route
           path="/teamEdit/:teamId"
           element={
@@ -45,7 +46,7 @@ function App() {
               <EditTeam />
             </IsPrivate>
           }
-        />
+          />
         <Route
           path="/teamCreate"
           element={
@@ -53,7 +54,7 @@ function App() {
               <CreateTeam />
             </IsPrivate>
           }
-        />
+          />
 
         <Route
           path="/treatmentEdit/:treatmentId"
@@ -62,7 +63,7 @@ function App() {
               <EditTreatment />
             </IsPrivate>
           }
-        />
+          />
         <Route
           path="/treatmentCreate"
           element={
@@ -70,7 +71,7 @@ function App() {
               <CreateTreatment />
             </IsPrivate>
           }
-        />
+          />
 
         <Route path="/login" element={<Login />} />
 
@@ -78,6 +79,7 @@ function App() {
         <Route path="/error" element={<Error />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
+      </div>
 
       <Footer className="footer" />
     </section>
